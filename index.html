@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Memeify</title>
+<link rel="stylesheet" type="text/css" href="layout.css">
+<link rel="icon" type="favicon" href="meme.png" />
+</head>
+<body>
+	<div style="min-width: 100%; min-height: 100%;">
+	<div id="loginwrap">
+	<h1 style="font-size: 45px;">Memeify <img src="meme.png" alt="Spongebob" /></h1>
+	<h3>Memeify your Text</h3>
+		<textarea id="input" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;" placeholder="Your Text" maxlength="10000" autocomplete="off"></textarea>
+		<button class="confirm" onclick="submit()"><strong>Memeify</strong></button>
+		<button class="confirm" onclick="reseter()"><strong>Clear</strong></button>
+		<textarea id="output" placeholder="yOuR TeXT" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;"></textarea>
+	</div>
+	</div>
+<script type="text/javascript">
+  function reseter() {
+    document.getElementById('input').value = "";
+    document.getElementById('output').value = "";
+  }
+
+  function submit() {
+    var original = document.getElementById("input").value;
+    var meme = "";
+    for (var i = 0; i < original.length; i++) {
+      var decision = Math.round(Math.random());
+      if (decision == 0) {
+        meme += original[i];
+      } else {
+        meme += (original[i]).toUpperCase();
+      }
+    }
+    document.getElementById('output').value = meme;
+    console.log(meme);
+  }
+</script>
+</body>
+</html>
