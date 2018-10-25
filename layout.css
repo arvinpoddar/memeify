@@ -1,25 +1,24 @@
 @charset "UTF-8";
-/* CSS Document */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body,html{width:100%;height:100%}body{-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;-webkit-text-size-adjust:none;margin:0;padding:0;font-family:"Helvetica Neue",Helvetica,Arial,sans-serif}ol,ul{list-style:none}hr{border:0;height:1px;background:#ccc}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}*{margin:0;padding:0;list-style:none;box-sizing:border-box}html,input,select,textarea,button,a{-webkit-tap-highlight-color:rgba(0,0,0,0)}
+
 @font-face {
   font-family: Proxima;
   src: url("proxima.otf");
 }
-* { /*Initial page settings*/
-	margin: 0;
-	padding: 0;
-}
+
 body { /*Page clearing stylings*/
 	margin: 0;
 	padding: 0;
 	width: 100%;
 	height: 100%;
 	color: white;
-	background: #cb2d3e;  /* fallback for old browsers */
-background: -webkit-linear-gradient(45deg, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(45deg, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	background-size: 200% 200%;
 	min-width: 320px;
 	min-height: 400px;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: #FFF;
+  font-family: Proxima, sans-serif;
 }
 html {
 	margin: 0;
@@ -39,23 +38,8 @@ a:hover {
 	text-decoration: underline;
 	color: inherit;
 }
-#loginwrap {
-	color: black;
-	background-color: #FFFFFF;
-	padding-top: 30px;
-	padding-bottom: 30px;
-	width: 50%;
-	margin-left: 25%;
-	margin-right: 25%;
-	text-align: center;
-	border-radius: 10px;
-	min-width: 288px;
-	position: absolute;
-	margin-top: 50px;
-	margin-bottom: 50px;
 
-}
-#loginwrap textarea {
+textarea {
 	display: block;
 	border-radius: 10px;
 	border: 1px solid #757575;
@@ -65,9 +49,54 @@ a:hover {
 	padding-right: 15px;
 	padding-left: 15px;
 	padding-top: 5px;
-	width: 65%;
+	width: 100%;
 	margin: 10px auto;
 }
+
+input[type=text] {
+  width: 100%;
+  border: 1px solid #dbdbdb;
+  outline: none;
+  box-shadow: none;
+  height: 40px;
+  line-height: 40px;
+  color: #444;
+  font-family: Proxima, sans-serif;
+  font-size: 17px;
+  text-indent: 18px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.checkbox {
+  margin-top: 5px;
+}
+.checkbox input, .checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: Proxima, sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 67%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.meme {
+  background: #cb2d3e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(45deg, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(45deg, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: 200% 200%;
+}
+
+.dank {
+  background: #ef473a;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #ef473a, #cb2d3e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #ef473a, #cb2d3e);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background-size: 200% 200%;
+}
+
 .confirm {
 	width: auto;
 	height: 30px;
@@ -89,8 +118,35 @@ a:hover {
   -moz-transition: 0.5s;
   -o-transition: 0.5s;
 }
+
 .confirm:hover {
   background-color: #2F80ED;
+}
+
+.dank .confirm {
+  width: auto;
+	height: 30px;
+  background-color: #800000;
+	border-radius: 10px;
+	padding: 5px 30px;
+	border: none;
+	font-family: Proxima, AvenirBook, Arial, Helvetica, sans-serif;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	cursor: pointer;
+	margin-bottom: 6px;
+
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+  .dank .confirm:hover {
+    background-color: #5e1914;
 }
 
 h1 img {
@@ -99,11 +155,102 @@ h1 img {
   vertical-align: middle;
   margin-top: -10px;
 }
-@media screen and (max-width: 800px) {
-	#loginwrap {
-		width: 95%;
-		margin-left: 2.5%;
-		margin-right: 2.5%;
-    margin-top: 20px;
-	}
+
+.login .tabbed {
+  text-align: left;
+}
+
+/* Style the tab */
+.login .tab {
+  overflow: hidden;
+  border-top: 0px;
+  /*border-bottom: 0px;*/
+  background-color: #595959 !important;
+  margin: 0px auto 0px auto;
+}
+
+.login .tablinks {
+  font-family: Proxima, sans-serif;
+  font-weight: bold;
+  color: white;
+}
+/* Style the buttons inside the tab */
+.login .tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  background: #595959;
+}
+
+/* Change background color of buttons on hover */
+.login .tab button:hover {
+  background-color: #f2f2f2;
+  color: #595959;
+}
+
+/* Create an active/current tablink class */
+.login .tab .meme.active {
+  background: white !important;
+  color: #2F80ED !important;
+}
+
+.login .tab .dank.active {
+  background: white !important;
+  color: #ef473a !important;
+}
+
+/* Style the tab content */
+.login .tabcontent {
+  display: none;
+  border-top: none;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  text-align: center;
+  overflow-y: scroll;
+  min-width: 100%;
+  min-height: calc(100vh - 50px);
+}
+
+.login .tab, .login .tabcontent {
+  width: 100%;
+  height: 100%;
+}
+
+.tabcontent form {
+  text-align: center;
+}
+
+.tabcontent h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+.tabcontent select {
+  text-indent: 12px;
+}
+
+.tabcontent a, .tabcontent a:visited{
+  color: #444;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+}
+.tabcontent a:hover {
+  text-decoration: underline;
+  text-align: center;
+}
+
+@media screen and (max-width: 500px) {
+.container {
+  width: 90%;
+}
 }
