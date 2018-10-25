@@ -214,7 +214,7 @@ h1 img {
   text-align: center;
   overflow-y: scroll;
   min-width: 100%;
-  min-height: calc(100vh - 50px);
+  min-height: calc(100vh - 49px);
 }
 
 .login .tab, .login .tabcontent {
