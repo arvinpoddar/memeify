@@ -3,5 +3,5 @@ A Javascript based webapp that takes your block of text and turns it into someth
 
 [View a Live Demo](https://arvinpoddar.github.io/memeify/)
 
-## Introducing "Dankify"
+## Now Including "Dankify"
 Memeify now includes the "dankify" feature, which filters text for a character of your choosing and replaces it with a 🅱️ emoji. Combined with the memeify feature, these tools can create the most intellectual text passages from nearly anything.
