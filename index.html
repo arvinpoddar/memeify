@@ -17,6 +17,7 @@
 		<button class="confirm" onclick="submit()"><strong>Memeify</strong></button>
 		<button class="confirm" onclick="reseter()"><strong>Clear</strong></button>
 		<textarea id="output" placeholder="yOuR TeXT" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;"></textarea>
+    <button class="confirm" onclick="copy()"><strong>Copy</strong></button>
 	</div>
 	</div>
 <script type="text/javascript">
@@ -38,6 +39,20 @@
     }
     document.getElementById('output').value = meme;
     console.log(meme);
+  }
+
+  function copy() {
+  /* Get the text field */
+  var copyText = document.getElementById("output");
+
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied!");
   }
 </script>
 </body>

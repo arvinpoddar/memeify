@@ -101,8 +101,9 @@ h1 img {
 }
 @media screen and (max-width: 800px) {
 	#loginwrap {
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
+		width: 95%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+    margin-top: 20px;
 	}
 }
