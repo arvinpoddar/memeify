@@ -23,10 +23,10 @@
 					<h1 style="font-size: 50px;"><strong>Memeify </strong><img src="meme.png" alt="Spongebob" /></h1>
 					<h2>Memeify your Text</h2>
 					<div class="container">
-						<textarea id="input" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;" placeholder="Your Text" maxlength="10000" autocomplete="off"></textarea>
+						<textarea id="input" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;" placeholder="Enter your message here..." maxlength="10000" autocomplete="off"></textarea>
 						<button class="confirm" onclick="submit()"><strong>Memeify</strong></button>
 						<button class="confirm" onclick="reseter()"><strong>Clear</strong></button>
-						<textarea id="output" placeholder="yOuR TeXT" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;"></textarea>
+						<textarea id="output" placeholder="... aNd it cOMeS oUt LiKe tHIs." style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;"></textarea>
 				    <button class="confirm" onclick="copy()"><strong>Copy</strong></button>
 					</div>
 				</div>
@@ -36,7 +36,7 @@
 					<div class="container">
 						<input type="text" id="filter" placeholder="Character Filter" maxlength="1"/>
 						<div class="checkbox">
-								<input id="caseMatch" type="checkbox" name="checkbox" value="yes"><label style="margin-left: 5px; margin-top: 2px;">Match Case</label>
+								<input id="caseMatch" type="checkbox" name="checkbox" value="yes"><label style="margin-left: 5px; margin-top: 2px;">Case Sensitive Filtering</label>
 						</div>
 						<textarea id="dankInput" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;" placeholder="Enter a filter character above to replace with 🅱️. The default filter is 'b'" maxlength="10000" autocomplete="off"></textarea>
 						<button class="confirm" onclick="dankify()"><strong>Dankify</strong></button>
