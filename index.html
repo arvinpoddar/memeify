@@ -38,10 +38,10 @@
 						<div class="checkbox">
 								<input id="caseMatch" type="checkbox" name="checkbox" value="yes"><label style="margin-left: 5px; margin-top: 2px;">Match Case</label>
 						</div>
-						<textarea id="dankinput" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;" placeholder="Enter a filter character above to replace with 🅱️. The default filter is 'b'" maxlength="10000" autocomplete="off"></textarea>
+						<textarea id="dankInput" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;" placeholder="Enter a filter character above to replace with 🅱️. The default filter is 'b'" maxlength="10000" autocomplete="off"></textarea>
 						<button class="confirm" onclick="dankify()"><strong>Dankify</strong></button>
-						<button class="confirm" onclick="dankreset()"><strong>Clear</strong></button>
-						<textarea id="dankoutput" placeholder="Dank Text  🅱️" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;"></textarea>
+						<button class="confirm" onclick="dankReset()"><strong>Clear</strong></button>
+						<textarea id="dankOutput" placeholder="Dank Text  🅱️" style="height: 150px; max-height: 250px; min-height: 35px; resize: vertical; overflow: auto;"></textarea>
 						<button style="margin-bottom: 40px;" class="confirm" onclick="dankCopy()"><strong>Copy</strong></button>
 					</div>
 				</div>
@@ -56,9 +56,9 @@
     document.getElementById('output').value = "";
   }
 
-	function dankreset() {
-    document.getElementById('dankinput').value = "";
-    document.getElementById('dankoutput').value = "";
+	function dankReset() {
+    document.getElementById('dankInput').value = "";
+    document.getElementById('dankOutput').value = "";
   }
 
 	function dankify() {
@@ -69,7 +69,7 @@
 				filter = "b";
 				console.log(caseCheck);
 			}
-			var original = document.getElementById("dankinput").value;
+			var original = document.getElementById("dankInput").value;
 	    var meme = "";
 	    for (var i = 0; i < original.length; i++) {
 	      if (original[i] == filter) {
@@ -82,7 +82,7 @@
 			if (filter.trim() == "") {
 			 filter = "b";
 		 	}
-		 var original = document.getElementById("dankinput").value;
+		 var original = document.getElementById("dankInput").value;
 		 var meme = "";
 		 for (var i = 0; i < original.length; i++) {
 			 if (original[i] == filter.toLowerCase() || original[i] == filter.toUpperCase()) {
@@ -92,7 +92,7 @@
 			 }
 		 }
 		 }
-    document.getElementById('dankoutput').value = meme;
+    document.getElementById('dankOutput').value = meme;
 	}
 
   function submit() {
@@ -113,14 +113,14 @@
   	var copyText = document.getElementById("output");
 		copyText.select();
   	document.execCommand("copy");
-		alert("Copied!");
+		alert("Copied memeified text!");
   }
 
 	function dankCopy() {
-  	var copyText = document.getElementById("dankoutput");
+  	var copyText = document.getElementById("dankOutput");
 		copyText.select();
   	document.execCommand("copy");
-		alert("Copied!");
+		alert("Copied dankified text!");
   }
 
 	function openTab(evt, action) {
